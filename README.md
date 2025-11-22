@@ -46,4 +46,3 @@ Respond to user interactions
 License
 
 This project is for educational purposes and can be freely modified or reused.
->>>>>>> 0447766b93e4de47d5d95f79ccb05c78324fb54d
