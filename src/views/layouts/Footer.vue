@@ -5,7 +5,7 @@
           <div class="col-12 col-md">
             <img
               class="mb-2"
-              src="../assets/brand/bootstrap-logo.svg"
+              src="../../../public/favicon.ico"
               alt=""
               width="24"
               height="19"
