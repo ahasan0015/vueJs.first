@@ -7,7 +7,7 @@ import ComparePlans from './views/pages/ComparePlans.vue';
 
 <template>
    <div class="container py-3">
-   <Navbar></Navbar>
+   <Navbar/>
       
       <main>
        <!-- <Pricing></Pricing>

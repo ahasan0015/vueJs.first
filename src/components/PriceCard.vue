@@ -17,7 +17,10 @@ defineProps({
     },
     isDisable:{
         type:Boolean,
-    }
+    },
+    id:{
+      type:Number
+    },
 });
 </script>
 
@@ -31,11 +34,11 @@ defineProps({
                   {{ price }}<small class="text-body-secondary fw-light">/mo</small>
                 </h1>
                 <slot> there is nothing</slot>
-                <button
+                <router-link :to="`/planDetails/${id}`"
                   type="button"
                   :class="`w-100 btn btn-lg ${btnClass}`">
                {{button}}
-                </button>
+                </router-link>
               </div>
             </div>
            

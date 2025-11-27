@@ -9,17 +9,17 @@ import PriceCard from '@/components/PriceCard.vue';
         <main>
         <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
           <div class="col">
-          <PriceCard title="All free"/>
+          <PriceCard title="All free" :id="100"></PriceCard>
           
           </div>
           <div class="col">
-            <PriceCard title="Standard Plan" price="20" button="Book Now" btnClass="btn-primary">
+            <PriceCard title="Standard Plan" price="20" button="Book Now" btnClass="btn-primary" :id="1">
                   
             
             </PriceCard>
           </div>
           <div class="col">
-            <PriceCard title="Standard Plan" price="20" button="Book fsfsfsdNow" btnClass="btn-primary" :isDisable="false"/>
+            <PriceCard title="Standard Plan" price="20" button="Book fsfsfsdNow" btnClass="btn-primary" :isDisable="false" :id="10"></PriceCard>
           </div>
           <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm border-primary">

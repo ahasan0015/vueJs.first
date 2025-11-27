@@ -5,6 +5,7 @@ import TheWelcome from '@/components/TheWelcome.vue'
 import Home from '@/views/pages/Home.vue'
 import Pricing from '@/views/pages/Pricing.vue'
 import Form from '@/views/pages/Form.vue'
+import PlanDetails from '@/views/pages/PlanDetails.vue'
 
 const myRouter = createRouter({
 
@@ -15,6 +16,8 @@ const myRouter = createRouter({
         { path: '/Compair', component: ComparePlans },
         { path: '/welcome', component: TheWelcome },
         { path: '/create', component: Form },
+        { path: '/planDetails/:id', component: PlanDetails },
+
     ]
 });
 
