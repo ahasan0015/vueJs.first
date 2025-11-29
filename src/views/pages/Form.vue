@@ -18,6 +18,14 @@ const post = reactive<Post>({
   title:"",
   details:"",
   isActive:false,
+  agree:false
+});
+const error = reactive({
+  title: '',
+  details: '',
+  isActive: '',
+  agree:''
+
 })
 
 // Form submit
@@ -34,6 +42,24 @@ function formSubmit2(){
   console.log("Title",post.title);
   console.log("details",post.details);
   console.log("details",post.isActive);
+  console.log("Agreed",post.agree);
+  const titleregEXp=/^[a-zA-Z0-9.-]+$/;
+  if(post.title === '' ){
+    error.title = 'Title is required';
+  }else if(post.title.length < 4 || post.title.length > 15){
+    error.title = 'Title must be between 4 to  20 characters ';
+  }else if(post.agree ===false){
+    error.agree = 'You have to select terms & condition';
+  }else if(!titleregEXp.test(post.title)){
+    error.title = 'Title must be alphanumeric, space .or -';
+  }else{
+    error.title ='';
+  }
+
+  if(error.title !== '' || error.details !== ''|| error.agree !== ""){
+    return;
+  }
+  alert('Submitted');
 }
 </script>
 
@@ -112,6 +138,7 @@ function formSubmit2(){
         Create Account
       </button>
     </form>
+    <!-- //form reactive -->
     <form 
       @submit.prevent="formSubmit2" 
       class="bg-white rounded-3 shadow p-4 w-100" 
@@ -121,7 +148,7 @@ function formSubmit2(){
 
       <!-- Name -->
       <div class="mb-3">
-        <label for="name" class="form-label">Full Name</label>
+        <label for="name" class="form-label">Title</label>
         <input 
           type="text"
           id="name"
@@ -129,6 +156,7 @@ function formSubmit2(){
           placeholder="Enter your name"
           class="form-control"
         >
+        <span class="text-danger">{{ error.title }}</span>
       </div>
 
       <!-- Email -->
@@ -174,10 +202,11 @@ function formSubmit2(){
 
       <!-- Checkbox -->
       <div class="form-check mb-3">
-        <input class="form-check-input" type="checkbox" id="terms" v-model="post.isActive">
-        <label class="form-check-label" for="terms">
+        <input class="form-check-input" type="checkbox" id="terms2" v-model="post.agree">
+        <label class="form-check-label" for="terms2">
           I agree to the Terms & Conditions
         </label>
+        <span class="text-danger">{{ error.agree }}</span>
       </div>
 
       <!-- Submit Button -->

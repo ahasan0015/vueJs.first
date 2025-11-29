@@ -44,6 +44,16 @@
               href="/Compair"
               >Compair Plans</a
             >
+            <a
+              class="me-3 py-2 link-body-emphasis text-decoration-none"
+              href="/create"
+              >Form</a
+            >
+            <a
+              class="me-3 py-2 link-body-emphasis text-decoration-none"
+              href="/posts"
+              >Post</a
+            >
           
           </nav>
         </div>

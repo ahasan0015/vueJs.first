@@ -6,6 +6,7 @@ import Home from '@/views/pages/Home.vue'
 import Pricing from '@/views/pages/Pricing.vue'
 import Form from '@/views/pages/Form.vue'
 import PlanDetails from '@/views/pages/PlanDetails.vue'
+import PostManage from '@/views/pages/posts/postManage.vue'
 
 const myRouter = createRouter({
 
@@ -17,6 +18,7 @@ const myRouter = createRouter({
         { path: '/welcome', component: TheWelcome },
         { path: '/create', component: Form },
         { path: '/planDetails/:id', component: PlanDetails },
+        { path: '/posts', component: PostManage },
 
     ]
 });
