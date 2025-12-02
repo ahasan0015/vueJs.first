@@ -5,13 +5,16 @@ import type { PostFake } from "@/interfaces/PostFake";
 
 
 
-let posts =ref<PostFake[]>([]);
+// let posts =ref<PostFake[]>([]);
+let posts =reactive<PostFake[]>([]);
 
 
 axios.get('https://jsonplaceholder.typicode.com/posts')
 .then(Response =>{
   console.log(posts);
-  posts.value = Response.data;
+  // posts.value = Response.data;
+  posts.push(...Response.data);
+  console.log(posts);
 })
 .catch(error =>{
   console.log(error);
@@ -37,19 +40,19 @@ axios.get('https://jsonplaceholder.typicode.com/posts')
         <td>{{post.title}}</td>
         <td>
    <!-- Edit -->
-    <a href="#" class="btn btn-primary btn-sm me-1" @click.prevent="editPost(post)">
+    <router-link to="" href="#" class="btn btn-primary btn-sm me-1">
       <i class="fa-solid fa-pen"></i>
-    </a>
+    </router-link>
 
     <!-- Update -->
-    <a href="#" class="btn btn-success btn-sm me-1" @click.prevent="updatePost(post)">
+    <router-link :to="`posts/${post.id}/details/${post.userId}`"  class="btn btn-success btn-sm me-1" >
       <i class="fa-solid fa-arrow-up"></i>
-    </a>
+    </router-link>
 
     <!-- Delete -->
-    <a href="#" class="btn btn-danger btn-sm me-1" @click.prevent="deletePost(post)">
+    <router-link to="" href="#" class="btn btn-danger btn-sm me-1">
       <i class="fa-solid fa-trash"></i>
-    </a>
+    </router-link>
 
 </td>
 
