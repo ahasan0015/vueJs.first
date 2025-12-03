@@ -22,6 +22,11 @@ axios.get('https://jsonplaceholder.typicode.com/posts')
 
 </script>
 <template>
+  <h3>Posts List</h3>
+  <router-link to="/posts/create" class="btn btn-success">
+  Add New Post
+</router-link>
+
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead class="table-dark">

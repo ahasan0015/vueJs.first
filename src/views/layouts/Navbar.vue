@@ -54,6 +54,11 @@
               href="/posts"
               >Post</a
             >
+            <a
+              class="me-3 py-2 link-body-emphasis text-decoration-none"
+              href="/postsOld"
+              >Post Old</a
+            >
           
           </nav>
         </div>

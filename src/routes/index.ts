@@ -8,6 +8,8 @@ import Form from '@/views/pages/Form.vue'
 import PlanDetails from '@/views/pages/PlanDetails.vue'
 import PostManage from '@/views/pages/posts/postManage.vue'
 import PostDetails from '@/views/pages/posts/PostDetails.vue'
+import PostDetailsOld from '@/views/pages/posts/PostDetailsOld.vue'
+import PostCreate from '@/views/pages/posts/PostCreate.vue'
 
 const myRouter = createRouter({
 
@@ -20,8 +22,9 @@ const myRouter = createRouter({
         { path: '/create', component: Form },
         { path: '/planDetails/:id', component: PlanDetails },
         { path: '/posts', component: PostManage },
+        { path: '/postsOld/:id/details/:userId', component: PostDetailsOld },
         { path: '/posts/:id/details/:userId', component: PostDetails },
-
+        { path: '/posts/create', component: PostCreate },
     ]
 });
 
