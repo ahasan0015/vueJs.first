@@ -39,15 +39,15 @@
             to="/price"
               >Price</router-link
             >
-            <a
+            <router-link
               class="me-3 py-2 link-body-emphasis text-decoration-none"
-              href="/Compair"
-              >Compair Plans</a
+              to="/Compair"
+              >Compair Plans</router-link
             >
-            <a
+            <router-link
               class="me-3 py-2 link-body-emphasis text-decoration-none"
-              href="/create"
-              >Form</a
+              to="/create"
+              >Form</router-link
             >
             <a
               class="me-3 py-2 link-body-emphasis text-decoration-none"
@@ -58,6 +58,12 @@
               class="me-3 py-2 link-body-emphasis text-decoration-none"
               href="/postsOld"
               >Post Old</a
+            >
+            
+            <router-link
+              class="me-3 py-2 link-body-emphasis text-decoration-none"
+              to="/categories"
+              >Category</router-link
             >
           
           </nav>
